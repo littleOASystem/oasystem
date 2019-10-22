@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- 定义模板 -->
+	<definition name="adminTemplate" template="/WEB-INF/jsp/shared/admin-template.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/shared/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/shared/footer.jsp" />
+		<put-attribute name="navbar" value="/WEB-INF/jsp/shared/navbar.jsp" />
+	</definition>
+	<!-- 定义具体页面组成 -->
+	<definition name="index" extends="adminTemplate">
+		<put-attribute name="title" value="首页" />
+		<put-attribute name="main" value="/WEB-INF/jsp/index.jsp" />
+	</definition>
+		<definition name="admin/emp-add" extends="adminTemplate">
+		<put-attribute name="title" value="员工添加页" />
+		<put-attribute name="main" value="/WEB-INF/jsp/emp-add.jsp" />
+	</definition>
+	<definition name="admin/emp-manage" extends="adminTemplate">
+		<put-attribute name="title" value="员工维护页" />
+		<put-attribute name="main" value="/WEB-INF/jsp/emp-manage.jsp" />
+	</definition>
+		<definition name="admin/dep-manage" extends="adminTemplate">
+		<put-attribute name="title" value="部门维护页" />
+		<put-attribute name="main" value="/WEB-INF/jsp/dep-manage.jsp" />
+	</definition>
+	<definition name="schedule-manage" extends="adminTemplate">
+		<put-attribute name="title" value="日程管理" />
+		<put-attribute name="main" value="/WEB-INF/jsp/schedule-manage.jsp" />
+	</definition>
+		<definition name="email-manage" extends="adminTemplate">
+		<put-attribute name="title" value="消息管理" />
+		<put-attribute name="main" value="/WEB-INF/jsp/email-manage.jsp" />
+	</definition>	
+	<definition name="notice-add" extends="adminTemplate">
+		<put-attribute name="title" value="公文添加" />
+		<put-attribute name="main" value="/WEB-INF/jsp/notice-add.jsp" />
+	</definition>	
+		<definition name="notice-check" extends="adminTemplate">
+		<put-attribute name="title" value="公文审核" />
+		<put-attribute name="main" value="/WEB-INF/jsp/notice-check.jsp" />
+	</definition>	
+	<definition name="file-manage" extends="adminTemplate">
+		<put-attribute name="title" value="文件管理" />
+		<put-attribute name="main" value="/WEB-INF/jsp/file-manage.jsp" />
+	</definition>	
+
+</tiles-definitions>
